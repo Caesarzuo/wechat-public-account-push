@@ -195,10 +195,10 @@ export const getCIBA = async () => {
     keys.forEach(obj => {
       const value = data[obj.from]
       const arr = []
-      for (let j = 0, i = 0; j < value.length; j += 20) {
+      for (let j = 0, i = 0; j < value.length; j += 200) {
         arr.push({
           name: `wx_${obj.to}_${i}`,
-          value: value.slice(j, j + 20),
+          value: value.slice(j, j + 200),
           color: getColor()
         })
         i++
@@ -277,10 +277,10 @@ export const getOneTalk = async (type) => {
     keys.forEach(obj => {
       const value = data[obj.from]
       const arr = []
-      for (let j = 0, i = 0; j < value.length; j += 20) {
+      for (let j = 0, i = 0; j < value.length; j += 200) {
         arr.push({
           name: `wx_${obj.to}_${i}`,
-          value: value.slice(j, j + 20),
+          value: value.slice(j, j + 200),
           color: getColor()
         })
         i++
@@ -426,10 +426,10 @@ export const getPoetry = async () => {
     const { content = DEFAULT_OUTPUT.poetryContent, origin } = data || {}
 
     const wxContent = []
-    for (let j = 0, i = 0; j < content.length; j += 20) {
+    for (let j = 0, i = 0; j < content.length; j += 200) {
       wxContent.push({
         name: `wx_poetry_content_${i}`,
-        value: content.slice(j, j + 20),
+        value: content.slice(j, j + 200),
         color: getColor()
       })
       i++
